@@ -1,5 +1,5 @@
 ## Introduction
-This is a more technical follow up to the discord announcement regarding the malware that was recently discovered in Project Retrac's client-side anticheat.
+This is a more technical follow up to the discord announcement (archived [here](./announcement.md)) regarding the malware that was recently discovered in Project Retrac's client-side anticheat.
 It provides proof to back up our arguments, even though Retrac staff have already (somewhat) admitted to it.
 
 I have uploaded the malicious dll in case you wanted to analyze it yourself, as well as a legitimate one for reference, which was pushed to production the next day. They are each named after their usage dates:\
