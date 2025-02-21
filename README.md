@@ -1,6 +1,6 @@
 ## Introduction
-This is a more technical follow up to the discord announcement regarding the malware that was recently disovered in Project Retrac's client-side anticheat.
-It provides proof to backup our arguments, even though Retrac staff themselves have already (somewhat) admitted it.
+This is a more technical follow up to the discord announcement regarding the malware that was recently discovered in Project Retrac's client-side anticheat.
+It provides proof to back up our arguments, even though Retrac staff have already (somewhat) admitted to it.
 
 I have uploaded the malicious dll in case you wanted to analyze it yourself, as well as a legitimate one for reference, which was pushed to production the next day. They are each named after their usage dates:\
 `bin/02-17-25.dll` is the malicious dll\
@@ -72,7 +72,7 @@ try { // bit7z classes can throw BitException objects
 They then use Crypto++ to come up with a password for the archive, and set the password, along with the compression level and compression method.\
 ![](images/image9.png)
 
-Next, then use [GetSystemInfo](https://learn.microsoft.com/en-us/windows/win32/api/sysinfoapi/nf-sysinfoapi-getsysteminfo) to obtain the number of cpu cores are available, and use that many threads in order to speed up compression. Finally, they begin compressing the archive to a buffer.
+Next, they use [GetSystemInfo](https://learn.microsoft.com/en-us/windows/win32/api/sysinfoapi/nf-sysinfoapi-getsysteminfo) to obtain the number of cpu cores are available, and use that many threads in order to speed up compression. Finally, they begin compressing the archive to a buffer.
 ![](images/image10.png)
 
 The archive buffer is then moved to the buffer pointed to by the first parameter in this function.
